@@ -105,11 +105,14 @@ However, the authentification still needs to be improved, as we did not store th
 
 ## Next Steps
 For future enhancements, we could consider:
-- Implementing Docker configuration for each microservice.
-- Utilizing a reverse proxy for improved routing and load balancing.
+- Assuring each Docker configuration for each microserviceis working fine.
 - Adding extra functionalities such as a database integration, additional games, or a dedicated frontend server.
 - Exploring alternative technologies for specific components, e.g., switching from Node.js to Python Flask for certain services.
-
+- Use a HAproxy service to loadbalance our motus server, by instanciating 2 motus servers, then listening on port 3001. HAproxy would have used the round-robin method to perform load balancing in 50/50 mode between the two servers. \
+Command to launch the file *haproxy.cfg*: 
+ ```bash
+    haproxy -f haproxy.cfg
+ ```
 
 ## Authors
 
