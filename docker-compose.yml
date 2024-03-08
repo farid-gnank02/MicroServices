@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./motus_for_assignment
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+  
+  auth:
+    build:
+      context: ./auth
+      dockerfile: Dockerfile
+    ports:
+      - "3005:3005"
+  
+  score:
+    build:
+      context: ./score_for_assignement
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./score_for_assignement/
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Soumission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Motus</h2>
+        <form action="/checkword" method="POST" id="wordForm">
+            <div class="form-group">
+                <label for="wordInput">Proposition:</label>
+                <input type="text" id="wordInput" name="wordInput" required>
+                <input type="hidden" id="valeurAIncrementer" value="0"><br/>
+                <div id="result"></div><br/>
+            </div> 
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <button onclick="redirigerVersAutrePage()">See score</button>
+    </div>
+      
+    <script src="script.js"></script>
+</body>
+</html>
